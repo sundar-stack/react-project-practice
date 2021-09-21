@@ -1,0 +1,50 @@
+.steps {
+  border: 2px solid skyblue;
+  padding: 15px;
+}
+.steps__continer {
+  padding: 10px;
+  margin: 10px;
+  background-color: grey;
+  border-radius: 10px;
+}
+
+.active-step {
+  border: 3px solid red;
+}
+
+.normal__img {
+  border: 2px solid blue;
+}
+.hotspot {
+  position: absolute;
+  inset: 0;
+  height: 100vh;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.911);
+  backdrop-filter: blur(5px);
+  z-index: 10;
+  overflow: hidden !important;
+}
+.coords {
+  color: white !important;
+  font-weight: 600;
+  margin: 0 1rem;
+}
+
+.hotspot__header {
+  height: 10%;
+  border: 1px solid #d3d3d3;
+}
+.hotspot__body {
+  height: 80%;
+  padding: 20px 40px;
+}
+.hotspot__body > img {
+  width: 1000px;
+  height: 539px;
+}
+.hotspot__header {
+  display: flex;
+  justify-content: space-between;
+}

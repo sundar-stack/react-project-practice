@@ -1,0 +1,250 @@
+{
+    "id": "11",
+    "config": {
+      "tenant": 1,
+      "type": 1,
+      "attributes": "",
+      "score": 1,
+      "difficulty_level": 1,
+      "remainingAttempts": 500,
+      "totalAttempts": 500
+    },
+    "contents": [
+      {
+        "language": 1,
+        "description": "Question text in english",
+        "content": null,
+        "option": null
+      },
+      {
+        "language": 2,
+        "description": "Question text in Hindi",
+        "content": null,
+        "option": null
+      }
+    ],
+    "mapper": {
+      "init": "img1",
+      "img1": {
+        "URL": "Image1",
+        "MAP": {
+          "name": "img1map",
+          "areas": [
+            {
+              "id": 1,
+              "name": "For single click",
+              "shape": "rect",
+              "coords": [
+                0,18,45,37
+              ]
+            },
+            {
+              "id": 1000,
+              "name": "backgroundArea",
+              "shape": "rect",
+              "coords": [
+                0,
+                0,
+                1000,
+                539
+              ]
+            }
+          ]
+        },
+        "response": {
+          "expectedText": "",
+          "dragValidations": {},
+          "areaId": 1,
+          "event": "singleClick",
+          "nextImg": "img2"
+        }
+      },
+      "img2": {
+        "URL": "Image2",
+        "MAP": {
+          "name": "img2map",
+          "areas": [
+            {
+              "id": 1,
+              "name": "For double click",
+              "shape": "rect",
+              "coords": [
+                124,268,188,330
+              ]
+            },
+            {
+              "id": 1000,
+              "name": "backgroundArea",
+              "shape": "rect",
+              "coords": [
+                0,
+                0,
+                1000,
+                539
+              ]
+            }
+          ]
+        },
+        "response": {
+          "expectedText": "",
+          "dragValidations": {},
+          "areaId": 1,
+          "event": "doubleClick",
+          "nextImg": "img3"
+        }
+      },
+      "img3": {
+        "URL": "Image3",
+        "onEnterConfig":{
+          "validText":true,
+          "mapToAnArea":1000
+        },
+        "MAP": {
+          "name": "img3map",
+          "areas": [
+            {
+              "id": 1,
+              "name": "For texting",
+              "shape": "rect",
+              "coords": [
+                123,318,302,358
+              ],
+              "onClickAction": "showTextBox"
+            },
+            {
+              "id": 1000,
+              "name": "backgroundArea",
+              "shape": "rect",
+              "coords": [
+                0,
+                0,
+                1000,
+                539
+              ]
+            }
+          ]
+        },
+        "response": {
+          "expectedText": "Type text here",
+          "dragValidations": {},
+          "areaId": 1000,
+          "event": "singleClick",
+          "nextImg": "img4"
+        }
+      },
+      "img4": {
+        "URL": "Image4",
+        "showDraggableDiv": true,
+        "MAP": {
+          "name": "img4map",
+          "areas": [
+            {
+              "id": 1,
+              "name": "For dragging",
+              "shape": "rect",
+              "coords": [
+                121,89,494,115
+              ]
+            },
+            {
+              "id": 1000,
+              "name": "backgroundArea",
+              "shape": "rect",
+              "coords": [
+                0,
+                0,
+                1000,
+                539
+              ]
+            }
+          ]
+        },
+        "response": {
+          "expectedText": "",
+          "dragValidations": {
+            "minStartX": 22,
+            "minStartY": 128,
+            "maxStartX": 57,
+            "maxStartY": 135,
+            "minEndX": 425,
+            "minEndY": 148,
+            "maxEndX": 983,
+            "maxEndY": 487
+          },
+          "areaId": 0,
+          "event": "",
+          "nextImg": "img5"
+        }
+      },
+      "img5": {
+        "URL": "Image5",
+        "showDraggableDiv": false,
+        "MAP": {
+          "name": "img5map",
+          "areas": [
+            {
+              "id": 1,
+              "name": "Click Open",
+              "shape": "rect",
+              "coords": [
+                342,316,410,339
+              ]
+            },
+            {
+              "id": 1000,
+              "name": "backgroundArea",
+              "shape": "rect",
+              "coords": [
+                0,
+                0,
+                1000,
+                539
+              ]
+            }
+          ]
+        },
+        "response": {
+          "expectedText": "",
+          "dragValidations": {},
+          "areaId": 1,
+          "event": "singleClick",
+          "nextImg": "img6"
+        }
+      },
+      "img6": {
+        "URL": "Image6",
+        "MAP": {
+          "name": "img6map",
+          "areas": [
+            {
+              "id": 1,
+              "name": "Click Anywhere",
+              "shape": "rect",
+              "coords": [
+                0,0,1000,539
+              ]
+            },
+            {
+              "id": 1000,
+              "name": "backgroundArea",
+              "shape": "rect",
+              "coords": [
+                0,
+                0,
+                1000,
+                539
+              ]
+            }
+          ]
+        },
+        "response": {
+          "expectedText": "",
+          "dragValidations": {},
+          "areaId": 1,
+          "event": "singleClick",
+          "nextImg": ""
+        }
+      }
+    }
+  }
+  

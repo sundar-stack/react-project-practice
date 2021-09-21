@@ -1,0 +1,19 @@
+.sections {
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+    width: 100%;
+    border:1px solid black;
+}
+
+input{
+width: 60%;
+padding:1rem 2rem;
+margin:1rem 2rem;
+}
+
+.section__item{
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+    width: 100%;
+    border:1px solid blue;
+}
