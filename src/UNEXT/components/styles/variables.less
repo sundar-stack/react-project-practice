@@ -1,0 +1,86 @@
+// GLOBAL COLORS as Variables
+@color-skyblue: #e6eefb; ///used for backgrounds
+@color-skyblue-dark: #89dceb; ///used for buttons
+
+@color-blue: #4593e0; //used for text
+@color-blue-light: #98e0ed; //used for clear button
+@color-blue-faded: #a0c7ed; // used for radio label
+
+@color-grey: #707071; //used for text
+@color-grey-light: #fafafa; //dropdown bg
+@color-grey-faded: #e7e1e1;
+@color-grey-dark: #4b4b4b;
+
+@color-orange: #f15a2b; ///used for buttons
+
+@color-yellow-dark: #ffc212; //used for buttons
+
+@color-green-light: #63cb76; ///used for checkbox
+
+@color-white: #fff;
+@color-black: #000;
+
+@color-error: #e68567;
+
+////MEDIA QUERIES
+@phone: ~"screen and (max-width: 37.5em)"; //600px
+@tab-port: ~"screen and (max-width: 56.25em)"; //900px
+@tab-land: ~"screen and (max-width: 75em)"; //1200px
+@big-desktop: ~"screen and (min-width: 1700px)"; // 1700px
+
+//FONT SIZE
+@font-size-vsmall: 0.8rem;
+@font-size-small: 1rem;
+@font-size-medium: 1.4rem;
+@font-size-default: 1.6rem;
+@font-size-large: 2rem;
+@font-size-vlarge: 3rem;
+@font-size-huge: 4rem;
+@font-size-vhuge: 6rem;
+
+//transitions
+@transition-short: all 0.2s ease-in-out;
+@transition: all 0.4s ease-in-out;
+@transition-long: all 0.8s ease-in-out;
+
+//box-shadow && inset-shadow
+@box-shadow: 0px 3px 6px #00000029;
+@box-shadow-medium: 0px 3px 6px #00000040;
+
+@inner-shadow-light: inset 0px 3px 6px #00000029;
+@inner-shadow-medium: inset 0px 3px 6px #00000040;
+@inner-shadow-dark: inset 0px 3px 15px #00000040;
+
+//border-radius
+@border-radius-vsmall: 0.3rem;
+@border-radius-small: 0.5rem;
+@border-radius-medium: 1rem;
+@border-radius-large: 2rem;
+@border-radius-huge: 5rem;
+
+//width and height
+
+////wireframe
+@border-black: 2px solid black;
+@border-red: 2px solid orangered;
+@border-blue: 2px solid blue;
+@border-grey: 2px solid @color-grey-light;
+
+//////MEDIA QUERY MANAGER
+///BREAK POINTS
+// 0 - 600px = mobile phone
+// 600- 900px = Tablet Potrait
+// 900 - 1200px = Tablet landscape
+//[1200 - 1800px ] = in between all comes under DESKTOP
+//1800 +  = big desktop
+
+///Devices
+// phone
+// tab-port
+// tab-land
+// big-desktop
+
+//Advanced way of writing media queries
+//for media queries use em instead of rem
+//rem will not work properly for media queries in some browsers
+//  1em = 16px

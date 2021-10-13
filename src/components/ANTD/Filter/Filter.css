@@ -1,0 +1,77 @@
+.filter {
+  padding: 20px;
+  margin: 30px 0;
+}
+
+.section__filter {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 30px;
+  padding: 20px;
+  border: 1px solid lightblue;
+  border-radius: 15px;
+  animation: animateLeftToRight 1s ease-out;
+  background-color: rgba(139, 143, 145, 0.349);
+  backdrop-filter: blur(5px);
+}
+
+/* @keyframes animate {
+  0% {
+    transform: translateX(-150px);
+  }
+  50% {
+    transform: translateX(150px);
+
+  }
+  100% {
+    transform: translateX(0px);
+  }
+} */
+
+@keyframes animateLeftToRight {
+  0% {
+    transform: translateY(
+      -50%
+    ); /*we can do margin-left minus but it will effect the browser performance its better to use transform*/
+    opacity: 0;
+  }
+  80% {
+    transform: translateY(10%);
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.filter__btn {
+  background-color: #d3d3d3;
+  padding: 20px;
+  border: 1px solid lightblue;
+  border-radius: 15px;
+  width: 100%;
+  text-align: center;
+  margin: 10px 0;
+  cursor: pointer;
+}
+
+.filter__inputs {
+  display: flex;
+  padding: 20px 10px;
+  border: 1px solid blue;
+  border-radius: 15px;
+  margin: 10px 0;
+}
+.filter__inputs > h1 {
+  margin: 0 10px;
+  padding: 0px 10px;
+  border: 1px solid grey;
+  border-radius: 15px;
+}
+
+.filter__inputs > h1 > span {
+  margin: 0 10px;
+  padding: 0px 10px;
+  border-left: 1px solid orangered;
+}

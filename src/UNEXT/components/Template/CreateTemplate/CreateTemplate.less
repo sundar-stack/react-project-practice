@@ -1,0 +1,113 @@
+@import "../../styles/main.less";
+
+.createTemplate {
+  background-color: @color-white;
+
+  .createTemplate__top {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem 1rem;
+    box-shadow: @box-shadow-medium;
+    border-radius: @border-radius-small;
+    padding-top: 1.3rem;
+
+    &-topFields {
+      width: 100%;
+      // margin: 1rem 0 1.2rem 0;
+      padding: 0 4rem 0 4rem;
+    }
+
+    &-bottomFields {
+      display: flex;
+      justify-content: space-between;
+      margin: 1rem 0;
+      padding: 0 4rem 1rem 4rem;
+      border-bottom: 1px dotted @color-grey-faded;
+    }
+
+    &-inputName {
+      width: 100%;
+    }
+
+    &-inputSection {
+      width: 20%;
+    }
+
+    &-inputQuestion {
+      width: 20%;
+    }
+
+    &-inputMarks {
+      width: 20%;
+    }
+  }
+
+  .createTemplate__bottom {
+    padding: 1rem;
+  }
+}
+
+/////For text area section
+///related css can be in CreateQuestion.css
+.template__instruction {
+  height: 70vh;
+}
+
+////
+.createTemplate__sections-container {
+  background-color: @color-white;
+  margin: 1.5rem 1rem;
+  box-shadow: @box-shadow-medium;
+  border-radius: @border-radius-small;
+  min-height: 100vh;
+  max-height: auto;
+  display: flex;
+  flex-direction: column;
+  padding: 0 2rem;
+}
+
+//////Template Section
+
+.templateSection {
+  // border: @border-black;
+  // height: 35rem;
+  padding: 0rem 2rem;
+  margin: 1.5rem 0;
+  box-shadow: @inner-shadow-light;
+  border-radius: @border-radius-medium;
+
+  &__top {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-column-gap: 2rem;
+    align-items: center;
+    // padding: 0rem 1rem 0rem 0rem;
+  }
+
+  &__filter-wrapper {
+    min-height: 10rem;
+    padding: 1rem 1rem;
+    background-color: @color-skyblue;
+    border-radius: @border-radius-small;
+    // margin: 0 0rem 1rem 0;
+    box-shadow: @inner-shadow-light;
+  }
+
+  &__bottom {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 0;
+
+    &-text {
+      display: inline-block;
+      color: @color-error;
+      font-size: @font-size-medium;
+      width: 30%;
+      margin: 0 2rem;
+    }
+  }
+}
+
+.template__section-dropdown {
+  width: 100%;
+}

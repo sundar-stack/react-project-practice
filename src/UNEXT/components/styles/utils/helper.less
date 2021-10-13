@@ -1,0 +1,18 @@
+.align(@position) {
+  display: flex;
+  justify-content: @position;
+  align-items: center;
+  width: 100%;
+  border: @border-grey;
+}
+.align-left {
+  .align(left);
+}
+
+.align-center {
+  .align(center);
+}
+
+.align-right {
+  .align(right);
+}

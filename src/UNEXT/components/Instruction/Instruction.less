@@ -1,0 +1,80 @@
+@import "../styles/main.less";
+
+.instruction {
+  width: 100%;
+  padding: 0 1rem 1rem 1rem;
+  border-radius: @border-radius-large;
+  box-shadow: @box-shadow-medium;
+  margin: 1rem 0;
+  transition: @transition;
+  height: 95%;
+
+  @media @big-desktop {
+    height: 95%;
+  }
+
+  &__decrease {
+    height: 55%;
+    margin: 2rem 0;
+
+    @media @big-desktop {
+      height: 45%;
+    }
+  }
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    height: 8%;
+
+    @media @big-desktop {
+      height: 6%;
+    }
+
+    &-decrease {
+      height: 14%;
+      @media @big-desktop {
+        height: 12%;
+      }
+    }
+
+    &-heading {
+      color: @color-grey;
+      font-weight: 600;
+      opacity: 0.5;
+      font-size: @font-size-medium;
+    }
+
+    &-buttons {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  &__textarea-wrapper {
+    width: 100%;
+    height: 92%;
+    outline: none;
+    resize: none;
+    padding: 1rem 2rem;
+    box-shadow: @inner-shadow-medium;
+    border-radius: @border-radius-large;
+    border: 0;
+    background-color: @color-skyblue;
+    font-size: @font-size-large;
+
+    @media @big-desktop {
+      height: 94%;
+    }
+  }
+
+  &__textarea-decrease {
+    height: 88%;
+
+    @media @big-desktop {
+        height: 88%;
+    }
+  }
+}

@@ -1,0 +1,187 @@
+/////imports
+@import "../styles/main.less";
+
+.create-question {
+  width: 100%;
+  height: auto;
+  padding-top: 1rem;
+  background-color: @color-white;
+}
+
+.create-question-top {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 0.5rem;
+  border-bottom: 1px dotted @color-grey-faded;
+
+  @media @big-desktop {
+    padding: 1rem 1rem 1rem 1rem;
+  }
+}
+
+.create__question-topleft {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 70%;
+  padding: 0 4rem;
+}
+.create__question-topRight {
+  width: 30%;
+  padding: 0 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dropdown__container {
+  width: 25%;
+  position: relative;
+  // padding: 0em 0 0rem 0rem;
+}
+
+.dropdown {
+  background-color: @color-grey-light;
+  box-shadow: @box-shadow;
+  border-radius: 2rem;
+  padding: 0 2rem;
+  width: 100%;
+  color: @color-grey;
+  font-size: @font-size-default;
+  // margin-bottom: 1rem;
+}
+
+.dropdown__wrapper {
+  background-color: transparent;
+  padding: 1rem 1rem;
+  outline: 0;
+  border: 0;
+  color: inherit;
+  width: 100%;
+}
+
+.input__container {
+  width: 70%;
+  position: relative;
+  // padding: 1rem 0 0.8rem 0rem;
+}
+
+.inner-shadow {
+  box-shadow: @inner-shadow-light;
+}
+
+.createQuestion__instruction {
+  width: 100%;
+  display: flex;
+  padding: 0.5rem 2rem;
+  border-bottom: 1px dotted @color-grey-light;
+
+  @media @big-desktop {
+    padding: 2rem 2rem 0.5rem 2rem;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 0.6rem; /* Remove scrollbar space */
+  background: transparent; /* Optional: just make scrollbar invisible */
+}
+/* Optional: show position indicator in red */
+::-webkit-scrollbar-thumb {
+  background: #dfdada;
+  border-radius: @border-radius-large;
+}
+
+.createQuestion__instruction-left {
+  width: 76%;
+  ///if you dont want the scroll you can set the height to min-height
+  height: 75vh;
+  padding: 0 1rem;
+  overflow-y: scroll;
+
+  @media @big-desktop {
+    height: 80vh;
+  }
+}
+
+.createQuestion__instruction-right {
+  width: 24%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem 5rem 2rem;
+}
+
+.create__question-language {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.language-dropdown {
+  width: 80%;
+  margin: 0 1rem;
+}
+
+///working till here
+////section for the upload area
+
+.create__question-uploadContainer {
+  display: flex;
+  background-color: @color-skyblue;
+  height: 100vh;
+  max-height: auto;
+  padding: 2rem 1rem;
+  width: 100%;
+  margin-top: 2rem;
+}
+
+.create__question-upload--left {
+  width: 80%;
+  border: 2px solid @color-grey-light;
+  border-radius: @border-radius-small;
+  margin-right: 0.5rem;
+  display: grid;
+  place-items: center;
+  background-color: @color-white;
+  box-shadow: @inner-shadow-dark;
+}
+
+.create__question-upload--left > img {
+  width: 100%;
+}
+
+.create__question-upload--right {
+  width: calc(100% - 1000px);
+  display: flex;
+  flex-direction: column;
+  padding: 0 1rem;
+}
+
+.create__question-steps--top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+.create__question-uploadSteps {
+  // flex: 1;
+  width: 100%;
+  min-height: 50%;
+  max-height: auto;
+  overflow-y: auto;
+  box-shadow: @box-shadow;
+  background: @color-white;
+  border-radius: 0.5rem;
+  padding: 2rem 1rem 1rem 1rem;
+}
+
+.create-question-upload-steps-bottom {
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}

@@ -1,0 +1,119 @@
+.btn(@bg , @color ,@padding ,@font-size) {
+  border-radius: 0.4rem;
+  border: 0;
+  outline: 0;
+  cursor: pointer;
+  background-color: @bg;
+  font-size: @font-size;
+  color: @color;
+  transition: all 0.4s ease-in-out;
+  padding: @padding;
+  margin: 0 0.5rem;
+  box-shadow: inset 0px 3px 6px #ffffff99, 0px 3px 6px #00000029;
+
+  //for larger screens
+  @media @big-desktop {
+    font-size: 2.2rem;
+  }
+}
+
+.btn-hover(@bg) {
+  background-color: darken(@bg, 8%);
+}
+
+.btn-orange {
+  .btn(@color-orange, @color-white, 1.5rem 0, 1.6rem);
+
+  &:hover {
+    .btn-hover(@color-orange);
+  }
+}
+
+.btn-light-blue {
+  .btn(@color-blue-light, @color-white, 0.3rem 1rem, 1.3rem);
+
+  //for larger screens
+  @media @big-desktop{
+    font-size: 1.3rem;
+  }
+
+  &:hover {
+    .btn-hover(@color-blue-light);
+  }
+}
+
+.btn-light-yellow {
+  .btn(@color-yellow-dark, @color-grey, 1.5rem 3rem, 1.6rem);
+
+  &:hover {
+    .btn-hover(@color-yellow-dark);
+  }
+}
+
+.btn-skyBlue {
+  .btn(@color-skyblue-dark, @color-grey, 1.5rem 3rem, 1.6rem);
+
+  &:hover {
+    .btn-hover(@color-skyblue-dark);
+  }
+}
+
+.btn-white {
+  .btn(@color-white, @color-blue, 1rem 1.5rem, 1.6rem);
+  opacity: 0.8;
+
+  //for larger screens
+  @media screen and (min-width: 1600px) {
+    font-size: 1.6rem;
+  }
+}
+
+.btn__width-25 {
+  width: 25%;
+}
+
+.btn__width-50 {
+  width: 50%;
+}
+.btn__width-75 {
+  width: 75%;
+}
+.btn__width-100 {
+  width: 100%;
+}
+
+.disabled {
+  background-color: rgb(92, 89, 89);
+  cursor: not-allowed;
+  &:hover {
+    background-color: rgb(92, 89, 89);
+  }
+}
+
+//////icons
+
+.icon(@size) {
+  height: @size;
+  width: @size;
+  cursor: pointer;
+  transition: @transition;
+  margin-top: 0.4rem;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+.icon-medium {
+  .icon(3.5rem);
+}
+
+.icon-medium {
+  .icon(4.2rem);
+}
+
+.icon-large {
+  .icon(5rem);
+}
+.icon-huge {
+  .icon(6rem);
+}
