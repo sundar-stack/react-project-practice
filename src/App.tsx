@@ -13,6 +13,7 @@ import CustomDropdown from "./components/ANTD/Dropdown/CustomDropdown";
 import Cascade from "./components/ANTD/Dropdown/Cascade";
 import Filter from "./components/ANTD/Filter/Filter";
 import MultiSelect from "./components/ANTD/Dropdown/MultiSelect";
+import FormikComponent from "./components/Formik/FormikComponent";
 
 // import CreateTemplate from "./sectionFiltering/CreateTemplate";
 
@@ -68,8 +69,9 @@ function App() {
           ></Route>
         </Switch>
       </BrowserRouter> */}
-      <MultiSelect />
+      {/* <MultiSelect /> */}
       {/* <Cascade /> */}
+      <FormikComponent />
     </div>
   );
 }

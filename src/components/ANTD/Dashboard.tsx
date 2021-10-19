@@ -1,7 +1,7 @@
 import React, { FC } from "react";
 import { Layout, Menu } from "antd";
 import { languages } from "../../App";
-import Form from "../Formik/Form";
+import Form from "../Formik/FormikComponent";
 
 const { Header, Sider, Content, Footer } = Layout;
 

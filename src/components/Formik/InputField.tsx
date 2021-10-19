@@ -5,6 +5,7 @@ interface inputProps {
   name: string;
   fieldname: string;
   placeholder: string;
+  type:string
 }
 
 const InputField: FC<inputProps> = ({ fieldname, ...props }) => {
