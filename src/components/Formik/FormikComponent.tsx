@@ -2,27 +2,38 @@ import React, { useState } from "react";
 import { Formik } from "formik";
 import InputField from "./InputField";
 import * as yup from "yup";
+import { TimePicker } from "antd";
+import { DatePicker, Space } from "antd";
+import moment from "moment";
 
 const formSchema = yup.object().shape({
   // userName: yup.string().required("username required"),
   // password: yup.string().required("passs required").min(8).max(12),
   // language: yup.string().required("lang required"),
   // textarea: yup.string().required("enter textarea"),
+  time: yup.string().required("enter time"),
 });
-
+const dateFormat = "YYYY-MM-DD";
 const FormikComponent = () => {
   const [inputStates, setInputStates] = useState({
     userName: "",
     password: "",
     language: "",
     textarea: "",
-    calender: "",
+    calender: "2021-10-13",
+    time: "00:00:00",
   });
+
+  function onChange(time: any, timeString: any) {
+    console.log(timeString);
+    setInputStates({ ...inputStates, time: timeString });
+  }
 
   const handle = (data: any) => {
     console.log("data", data);
-
+    console.log(inputStates);
     // ///2021-10-13
+    console.log(new Date(data.calender).getDate());
 
     // let mainDate = inputStates.calender;
     // console.log(mainDate);
@@ -32,6 +43,13 @@ const FormikComponent = () => {
     // let final = `${year}-${month}-${date}`;
     // console.log(final);
   };
+
+  // function onChange(date: any, dateString: any) {
+  //   console.log(dateString);
+  //   console.log(new Date(dateString).getDate());
+  //   setInputStates({ ...inputStates, time: dateString });
+  // }
+
   return (
     <Formik
       initialValues={inputStates}
@@ -96,6 +114,33 @@ const FormikComponent = () => {
               placeholder="Enter date"
               type="date"
             />
+
+            {/* <InputField
+              name="time"
+              fieldname="time"
+              placeholder="En"
+              type="time"
+              step="0.001"
+              // min="00:30:01"
+              // max="02:30:02"
+            /> */}
+
+            {/* <TimePicker use12Hours onChange={handleChange} /> */}
+
+            {/* <DatePicker
+              onChange={onChange}
+              defaultValue={moment(inputStates.time, dateFormat)}
+            />
+            {errors.time && touched.time && (
+              <p style={{ color: "red" }}>{errors.time}</p>
+            )} */}
+
+            <TimePicker
+              onChange={onChange}
+              defaultValue={moment(inputStates.time, "HH:mm:ss")}
+              defaultOpenValue={moment("00:30:00", "HH:mm:ss")}
+            />
+
             <button type="submit">handle</button>
           </form>
         );

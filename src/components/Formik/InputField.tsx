@@ -5,7 +5,10 @@ interface inputProps {
   name: string;
   fieldname: string;
   placeholder: string;
-  type:string
+  type: string;
+  min?: any;
+  max?: any;
+  step?: any;
 }
 
 const InputField: FC<inputProps> = ({ fieldname, ...props }) => {
@@ -14,7 +17,9 @@ const InputField: FC<inputProps> = ({ fieldname, ...props }) => {
     <div>
       <label htmlFor={props.name}>{fieldname}</label>
       <input id={props.name} {...field} {...props} />
-      {meta.error && meta.touched && <p style={{color:"red"}}>{meta.error}</p>}
+      {meta.error && meta.touched && (
+        <p style={{ color: "red" }}>{meta.error}</p>
+      )}
     </div>
   );
 };
